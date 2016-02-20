@@ -12,7 +12,7 @@ def watch():
     return 'movie.mp4'
 
 @hug.get('/image.png', output=hug.output_format.png_image)
-def create_image():
+def create_image(text):
     image = Image.new('RGB', (100, 50)) # create the image
-    ImageDraw.Draw(image).text((10, 10), 'pinkhelium', fill=(255, 0, 0))
+    ImageDraw.Draw(image).text((10, 10), text[name], fill=(255, 0, 0))
     return image
