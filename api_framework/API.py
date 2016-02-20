@@ -11,7 +11,7 @@ def watch():
     """Watch an example movie, streamed directly to you from pinkhelium"""
     return 'movie.mp4'
 
-@hug.get('/image.png', output=hug.output_format.png_image)
+@hug.get('/image', output=hug.output_format.png_image)
 def create_image(text):
     image = Image.new('RGB', (100, 50)) # create the image
     ImageDraw.Draw(image).text((10, 10), text, fill=(255, 0, 0))
