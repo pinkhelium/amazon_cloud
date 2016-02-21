@@ -16,3 +16,14 @@ def create_image(text):
     image = Image.new('RGB', (500, 500)) # create the image
     ImageDraw.Draw(image).text((100, 100), text, fill=(255, 0, 0))
     return image
+	
+
+@hug.get('/greet_user', versions=1)
+
+
+def greet_user(values):
+	'''Describe Your Function Here!'''
+	return("Welcome to pinkhelium" + greet_user)
+
+	
+
