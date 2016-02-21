@@ -27,3 +27,19 @@ def greet_user(values):
 
 	
 
+@hug.get('/dummy', versions=4)
+
+
+def dummy(values):
+	'''Describe Your Function Here!'''
+	return(values)
+	
+
+@hug.get('/deploy', versions=3)
+
+
+def deploy(values):
+	'''deploy function is this!'''
+	return("DEPLOYED")
+	
+
