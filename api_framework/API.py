@@ -13,6 +13,6 @@ def watch():
 
 @hug.get('/image', output=hug.output_format.png_image)
 def create_image(text):
-    image = Image.new('RGB', (100, 50)) # create the image
-    ImageDraw.Draw(image).text((10, 10), text, fill=(255, 0, 0))
+    image = Image.new('RGB', (500, 500)) # create the image
+    ImageDraw.Draw(image).text((100, 100), text, fill=(255, 0, 0))
     return image
